@@ -1,0 +1,7 @@
+Alumnos inscritos: 5
+Cantidad de aprobados: 3
+Cantidad de aprobados: 2
+Stats C1 - Prom: 64, DE:21.75, Apro:40.0%, Repro:60.0%
+Stats C2 - Prom: 50, DE:29.68, Apro:20.0%, Repro:80.0%
+Stats C3 - Prom: 71, DE:28.67, Apro:60.0%, Repro:40.0%
+Stats Final - Prom: 62, DE:23.7, Apro:60.0%, Repro:40.0%

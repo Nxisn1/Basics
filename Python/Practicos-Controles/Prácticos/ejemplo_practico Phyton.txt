@@ -1,0 +1,150 @@
+#include<iostream>
+
+using namespace std;
+
+int seed = 1; //creo la variable globar seed
+
+//creo la funcion random, lo que hara sera generar un numero aleatorio mediante sumas y multiplicaciones a la semilla (ver canal guinxu para mas explicacion)
+int random(int x){
+	seed = (13 * seed + 543)%100;
+	return seed%x; //devuelve la el modulo de la semilla entre el numero ingresado. eso significa que solo devuelve numeros entre 0 y x
+}
+
+//creo las variables de tu pokemon como globales para poder usarlas en el main y en la pelea
+int hp;
+int hpi;
+int atk;
+
+//creo la funcion pelea 
+int pelea(string nombre){
+	
+	//creo las estadisticas del pokemon enemigo
+	int hpP = 30 + random(31);
+	int atkP = 10 + random(11);
+	
+	cout << "Oh no! un pokemon salvaje ha aparecido" << endl;
+	int respuesta;
+	
+	//el bucle se ejecutara hasta que la vida de uno de los dos sea menor o igual a 0
+	while(hp > 0 && hpP > 0){
+		cout << "\nPokemon salvaje\thp: "<< hpP << endl;
+		cout << "Tu pokemon\thp:" << hp << endl << endl;
+		
+		cout << "que quieres hacer "<< nombre << "?\n";
+		cout << "1.Atacar\t2.Huir\n";
+		cin >> respuesta;
+		
+		if(respuesta == 1){
+			if(random(16)){ //recibira un numero entre 0 y 15, si el if recibe 0 sera falso cualquier otro numero es verdadero, osea tiene probabilidad de 1/16 de fallar
+				cout << "tu pokemon ataco.   Pokemon salvaje recibe "<<atk<<" de daño\n";
+				hpP -= atk;
+			}else{
+				cout << "tu ataque ha fallado" << endl;
+			}
+			
+		}else if(respuesta == 2){
+			if(random(10)){
+				cout << "has huido exitosamente" << endl << endl;
+				return -1; //si huyes la funcion devuelve -1
+			}else{
+				cout << "el pokemon salvaje no te deja huir" << endl;
+			}
+		}else{
+			cout << "por favor ingresa una opcion valida\n";
+		}
+		
+		if(hpP > 0){
+			if(random(16)){
+				cout << "Pokemon salvaje ataco.   tu pokemon recibe "<<atkP<<" de daño\n";
+				hp -= atkP;
+			}else{
+				cout << "El ataque de Pokemon salvaje fallo" << endl;
+			}
+		}
+		
+		
+	}
+	
+	if(hp > 0){ //si tu vida es mayor a 0 es porque ganaste.
+		cout << "\nPokemon salvaje ha sido derrotado" << endl;
+		return true; //la funcion devulvera 1
+	}else{
+		cout << "\nOh no tu pokemon ha muerto! Perdiste" << endl;
+		return false; //al perder devolvera 0
+	}
+	
+}
+
+int main(){
+	
+	cout << "bienvenido al mundo pokemon" << endl;
+	string nombre;
+	char respuesta;
+	
+	do{
+		cout << "cual es tu nombre?:  ";
+		cin >> nombre;
+		
+		
+		cout << "tu nombre es " << nombre << " cierto?  y/n  ";
+		cin >> respuesta;
+	}while(respuesta != 'y');
+	
+	cout << "muy bien " << nombre << " iniciemos tu aventura pokemon" << endl << endl;
+	
+	for(int a = 0; a < nombre.size(); a++){  //recorrere cada letra del nombre, la convierto en un numero y la multiplico a la semilla, asi cada nombre tiene distinta semilla
+		seed = seed * int(nombre[a]) % 100000000;
+	}
+	
+	//creamos las estadisticas del pokemon
+	hp = 30 + random(31);
+	hpi = hp; //hpi guardara el valor inicial de la vida para asi saber cuanto es el max del pokemon
+	atk = 10 + random(11);
+	
+	bool continuar = true;
+	int victorias = 0;  //cuento las victorias
+	
+	while(continuar){
+		int accion;
+		cout << "que quieres hacer " << nombre << "?:\n";
+		cout << "1.Caminar\t\t2.Ir al Centro pokemon\n3.Ver estadisticas\t4.Salir\n";
+		cin >> accion;
+		
+		switch(accion){
+			case 1:
+				if(random(2)){ //50% de probabilidad de iniciar una pelea
+					int resultado = pelea(nombre);
+					if(resultado == 1){
+						victorias++; //si ganaste sumas una victoria
+					}else if(resultado == 0){
+						continuar = false; //si perdiste el juego termina
+					}
+					//si devuelve cualquier otra cosa no pasara nada
+				}
+				else cout << "no paso nada\n\n";
+				
+			break;
+			case 2:
+				cout << "\nBienvenido al centro pokemon! Tu pokemon ha sido curado" << endl << endl;
+				hp = hpi;
+				random(1);
+			break;
+			
+			case 3:
+				cout << "\nTu pokemon\thp:" << hp << "/" << hpi <<"\tatk: "<< atk << endl;
+				cout << "Pokemones salvajes derrotados: " << victorias << endl << endl;
+				random(1);
+			break;
+			
+			case 4:
+				continuar = false;
+			break;
+			default:
+				cout << "Por favor ingresa una opcion valida\n";
+		}
+		
+	}
+	cout << "Adios " << nombre << " Hasta la proxima!" << endl;
+	
+	return 0;
+}
