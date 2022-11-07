@@ -1,0 +1,36 @@
+sacar promedio bueno
+def promedio(valores):
+	sumaParcial=0
+	for valor in valores:
+		sumaParcial+=valor
+	cantidadValores = len(valores)
+	return sumaParcial/float(cantidadValores)
+print(promedio(valores))
+
+
+def promedio(valores):
+ 	sumaParcial=0
+ 	for valor in valores:
+ 		sumaParcial+=valor
+ 	cantidadValores = len(valores)
+ 	x = sumaParcial/float(cantidadValores)
+n=len(valores)
+cuadrados= []
+for valor in valores:
+ r = (valor - x)**2
+ cuadrados.append(r)
+y = (sum(cuadrados)/(n - 1))**0.5
+
+
+
+malardo
+def promedio_std(x,y)
+    lista=()
+    n=len(lista)
+    x= sum(lista)/n
+    cuadrados = [lista[0]**2 + lista[1]**2 + lista[2]**2 + lista[3]**2 + lista[4]**2]
+    for dato in datos:
+        r = (lista - x)**2
+        cuadrados.append(r)
+        y=(sum(cuadrados))/(n-1))**0,5
+        return (x,y)

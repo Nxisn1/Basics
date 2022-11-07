@@ -1,0 +1,20 @@
+Problema
+Determinar si un número es par o impar
+ 
+Solución
+Entrada: 5
+Salida: 5 es impar
+Codigo Fuente en Python
+a=int(input("ingrese un numero\n"))
+if(a%2==0):
+ print(str(a)+" es par")
+else:
+ print(str(a)+" es impar")
+
+def es_par(numero):
+  if numero % 2 == 0
+    return True
+  else:
+    return False
+print(es_par(8))
+print(es_par(7))

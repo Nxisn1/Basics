@@ -1,0 +1,49 @@
+MÁXIMO COMÚN DIVISOR
+def mcd(a, b):
+	resto = 0
+	while(b > 0):
+		resto = b
+		b = a % b
+		a = resto
+	return a
+
+conocer la potencia de 2 más 
+grande que es menor o igual a cierto número
+
+def exponente(n):   (malo)
+     i=1
+     while 2**i<=n:
+         i=i+1
+         return i-1 
+(bueno) pero malo por que me entrega none y 
+tengo que hacer que no salga eso
+def exponente (n):   
+   for i in range (1,n):
+       if  2**(i)==n:
+           print(i)
+           break
+       if 2**(i)>n:
+           print(i-1)
+           break  
+
+totalmente bueno
+
+def exponente (n):
+   n_return = ""   
+   for i in range (1,n):
+       if  2**(i)==n:
+           print(i)
+           break
+       if 2**(i)>n:
+           print(i-1)
+           break
+   return n_return
+
+otra solución:
+
+def exponente(n):
+    i=1;
+    while 2**i<=n:
+        i=i+1
+    return i-1
+

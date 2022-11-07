@@ -1,0 +1,51 @@
+1 
+def mezclador(string_a, string_b):
+     a = (string_a[0])
+     b = (string_a[1])
+     c = (string_b[-2])
+     d = (string_b[-1])
+     string_c = a+b+c+d
+     return string_c
+
+
+2 buena
+def intercalar(string_a,string_b):
+
+    r = ""
+    i= 0
+    l=len(string_a)
+
+    while i < l:
+        r = r + string_a[i] + string_b
+        i = i + 1
+
+    return r
+
+3 buena 
+def ocurrencias(string):
+ unos = string.count("1")
+ ceros = string.count("0")
+ a = unos - ceros 
+ return a
+
+4 buena
+def remover_enesimo(s,n):
+    s = list(s)
+    del s[n]
+    s = "".join(s)
+    return s
+
+5 mala nose
+def reemplazar_mayusculas(cadena, i):
+    while i<len(cadena):
+        if cadena[i].isupper():
+            cadena= cadena.replace(cadena[i], '$')
+        i+=1
+    return cadena
+
+def reemplazar_mayusculas(cadena, i):
+    while i<len(cadena):
+        if cadena[i].isupper():
+            cadena= cadena.replace(cadena[i], '$')
+        i+=1
+    return cadena

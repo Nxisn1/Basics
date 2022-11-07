@@ -1,0 +1,326 @@
+Phyton (PyCharm 3.4)
+Visual studio code = editor de código
+Visual studio = IDLE
+
+
+-int= numero entero (1-2-3-4)
+
+-float= decimales (1,76 - 0,5)
+
+-str= secuencia de caracteres ("entre comillas")
+se puede tomar una letra de un str, parte del 0 
+print("Martes"[0]) 'M'
+print("Martes"[2]) 'r'
+también se puede hacer al revés se hace con números
+negativos y empieza por el -1 
+print("Martes"[-1]) 's'
+
+(se puede operar un int con un float,
+pero no un int con un str) (se puede tranformar
+un int a float y viceversa)
+
+-bool= True o False
+(cuando no hay nada es False 'bool(0)=False'
+'bool("")=False' y cuando hay algo (lo que sea)
+da True 'bool(23)=True'
+
++ = suma
+- = resta
+/ = división 
+* = multiplicación (se puede ocupar con str para 
+                    se repita)
+
+se aplican con bool (not, and, or) 
+< = menor que
+> = mayor que
+"!=" = distinto
+"==" = igualdad
+y entregan un bool (True o False)
+
+-NOT = niega el resultado, y da lo contrario de 
+       lo que daría sin el not)
+-AND = entrega True cuando los 2 son verdaderos
+-OR = da True cuando uno es verdadero
+
+-Concatenación (unir 2 o más str) 
+           "yo soy" + "tu padre" 'yo soy tu padre'
+
+-type (nos dice que tipo de dato es)
+      type(2) 'tipo int'
+
+-Variable: deben empezar con letra o con "_"
+        y las variables con distintas mayusculas son
+        distintas 'Vivaldi != vivaLdi != VIVALdi'
+
+print (para que se escriba algo en pantalla)
+
+input (para preguntarle algo al usuario)
+      (se guarda como str pero podemos poner antes 
+      int/float/bool para que se guarde así)
+
+Indentación = son los espacios del principio, se hacen con tab 
+              (importantes por que puede dar error)
+
+if = se pone una condición, si se cumple, el 
+     programa hará lo que esta en if
+
+elif = es para poner más condiciones, si no se cumple lo que
+       esta en if, el programa verá lo que está en elif
+
+else = si no se cumple ninguna de las condiciones de arriba,
+        hará lo que sale en else. por lo tanto, a else 
+	no es necesario ponerle condición
+
+(puede existir un programa solo con if, pero no 
+ solo con else)
+
+while = es para que se repita la condición hasta 
+        que sea falsa
+    (tiene que tener un termino, sino será infinito y
+     no seguirá el programa)
+
+for = para que se repita la condición un número 
+      de veces definidos 
+
+For i in range(7) 
+print(i) '1 2 3 4 5 6'
+
+range (de forma predeterminada empezará de 0, pero
+       se le puede poner un comienzo)
+       for i in range(8,14)
+       print(i) '8 9 10 11 12 13 14'
+
+
+range (también se le puede poner de cuanto en cuanto
+       avance) (inicio,fin,paso) 
+for i in range(5,20,3) 
+    print(i) '5 8 11 14 17'
+
+return = fin de programa 
+        (no se ejecutará nada después de return) 
+
+open (para abrir una carpeta en phyton) 
+      open("arch.txt","W")
+      (tenemos que saber el nombre y la extensión)
+      (predeterminadamente se abrirá en solo lectura)
+      "r" solo lectura (read)
+      "w" escritura (write)
+      .redline para leer linea por linea el texto
+
+close (para terminar el archivo)
+       archivo.close()
+
+\n = para que escriba en lines distintas 
+     print("Uno \nDos \nTres)
+     'Uno
+      Dos 
+      Tres'
+
+len (sirve para decir cuantos caracteres 
+     tiene el str)
+len("hola") '4' 
+   (los espacios y puntos, etc. también son 
+    considerados caracteres)
+   cuando se ocupa con un str da el numero de 
+   caracteres, en cambio cuando se ocupa en una
+   lista da el numero de elementos que tiene
+len(lista)
+
+upper sirve para poner todo un str en mayúsculas 
+      print("hola".upper()) 'HOLA'
+
+lower en minúsculas
+      print("hoLA".lower()) 'hola'
+
+strip sirve cortar extremos 
+      a ="Bien. Martes a las 5." 
+      print(a.strip(".")) 'Bien. Martes a las 5'
+
+replace sirve para reemplazar algún caracter 
+        del str 
+a ="Hola!!1!" 
+print(a.replace("1","!")) 'Hola!!!!'
+
+
+slices (trozos de la lista) 
+ print(no_olvidar[1:4]) (imprimirá lo que esté en el 
+                          1, 2 y 3) (parte del 0)
+['palta', 'lechuga', 'naranjas']
+
+list (sirve para ordenar) (mutables) 
+ concatenar listas (+) y repetir listas (*)
+ secuencia de elementos (de cualquier tipo) 
+ separados por una coma y comienzo y final con []
+ no_olvidar = ["huevos", "palta", "lechuga", 
+               "naranjas", 7000]
+
+for elem in no_olvidar:
+   print("No olvides", elem)
+No olvides huevos
+No olvides palta
+No olvides lechuga
+etc.
+
+lista[inicio:fin:step]
+["a", "b", "c", "d", "r", "f", "g", "h", "i", "j"]
+  0    1    2    3    4    5    6    7    8    9 
+
+print(lista[2:7])   ['c', 'd', 'e', 'f', 'g']
+print(lista[2:7:2]) ['c', 'e', 'g']
+print(lista[7:])    ['h', 'i', 'j']
+print(lista[:5:3])  ['a', 'd']
+print(lista[2:2])   []
+print(lista[::-1])  ['j', 'i', 'h', 'g', 'f', 'e',
+                     'd', 'c', 'b', 'a']
+
+
+append (agregar elemento al final de la lista)
+       (solo agrga un elemento mas)
+       ("no_olvidar" es el nombre de la lista)
+        'no_olvidar.append("apio")' 
+        asi se agrega algo a la lista
+
+extend (para agregar varios elementos de una)
+        'no_olvidar.extend(["apio", tomates"]) 
+
+insert(index, elemento) (agrega un elemente en 
+                         el lugar que queremos)
+             'no_olvidar.insert([2, "tomates"]) 
+los demas elementos se corren un espacio
+
+pop (elimina el primer elemento)
+  'comprado = no_olvidar.pop()'
+
+remove(index) elimina el elemnto en index
+  'comprado = no_olvidar.remove(3)'
+   al eliminarlo se reordenan los elementos 
+
+in (elemento in lista) es booleano entrega
+                       True o False 
+   ("vino" in no_olvidar) 'False'
+
+index (para saber en que posición esta un elemento
+       en la lista)
+      no_olvidar.index("lechuga")
+      'lechuga: 2'
+(si pedimos algo que no está en la lista, tirará error)
+
+split (separa string en separador y lo guarda en una
+      lista) 
+      texto = input("Ingrese una lista: ")
+no_olvidar = texto.split(",") (asi separará cada vez
+                              que vea una coma(,))
+                             podemos poner cualquier
+                             separador
+
+sort (para ordenar la lista de menor a mayor) 
+      alfabeticamente si son str
+      numericamente de menor a mayor si son numeros
+     'no_olvidar.sort()'                 
+     
+
+count (sirve para contar el número de ocurrencias 
+       de un carácter o letra en una cadena)
+cadena = "Hola, mundo"
+ocurrencias = cadena.count("o")
+
+
+
+excepciones 
+
+esta todo correcto (sintaxis, etc.), sin embargo, puede fallar 
+por lo que escriba el usuario
+se ejecuta el código escribiendo el error, nos dará el nombre
+del error y la linea donde está.
+vamos a la linea y lo encerramos en un try y luego except 
+(parecido a un if-else)
+
+def division(num1, num2):
+	return num1/num2 
+#si ponemos que num2=0 nos dará error (ZeroDivisionError)
+
+def division(num1, num2):
+	try:
+		return num1/num2
+	except ZeroDivisionError:
+		print("no se puede dividir por 0")
+		return "operación invalida"
+
+
+
+numero = (int(input("ingrese un numero") 
+# si escribimos un str nos dará el error de ValueError
+
+entonces metemos try except
+
+try:
+	numero = (int(input("ingrese un numero")
+except ValueError:
+	print("eso no es un numero")
+
+
+
+para hacer que el código funcione hasta que el usuario ponga lo que pedimos
+metemos todo el try-except en un while
+ 
+while True:
+	try:
+		numero = (int(input("ingrese un numero")
+		break
+	except ValueError:
+		print("eso no es un numero")
+	
+
+se pueden escribir varios except seguidos con distintos errores
+si se ocupa try tiene que tener por lo menos un except o finally, si no,
+no funciona
+
+finally : va al último del try-except y se ejecuta siempre, pase lo que pase
+
+
+excepciones propias 
+
+hacemos un código que evalue la edad 
+def evalua(edad):
+	if edad<20:
+		return("eres joven")
+	else:
+		return("eres grande")
+#si el ususaria pone una edad negativa eso es imposible y no entra 
+en las categorias de nuestro programa por lo tanto "inventamos nuestro error"
+con raise 
+
+def evalua(edad):
+	if edad<0:
+		raise TypeError("como vai a tener edad negativa skw")
+	if edad<20:
+		return("eres joven")
+	else:
+		return("eres grande")
+
+#al lado de raise podemos poner cualquier error y al lado un mensaje
+#si inventamos un error nos va a dar dos errores pq no lo tenemos definido 
+#primero hay q definirlo 
+
+podmeos guardar el error con un nombre mas descriptivo para q el usuario lo entienda
+
+num1=int(input("ingresa un numero para sacar la raiz cuadrada")
+#si damos un numero negativo dará error 
+
+try:
+	print("calculaRaiz(num1)) #calculaRaiz es un definicion ya antes definida
+excpect ValueError as ErrorDeNumeroNegativo: #el "as" le cambio el nombre
+	print("ErrorDeNumeroNegativo")
+
+
+
+
+
+
+
+
+
+
+
+
+

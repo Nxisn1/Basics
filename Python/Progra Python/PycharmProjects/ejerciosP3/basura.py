@@ -1,0 +1,1 @@
+def quiero(N,X):

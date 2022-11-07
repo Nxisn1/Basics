@@ -1,0 +1,28 @@
+de por ahi
+def es_primo(numero):
+  primo = True
+  i=2
+  if numero<=1:
+    primo=False
+  else:
+    while i<= numero:
+      if numero% i==0 and numero !=i:
+        primo= False
+        break
+      else:
+        primo= True
+      i +=1
+  return primo
+
+
+
+el que hice yo solito
+i=2
+while i<=a:
+    if a% i==0 and a !=i:
+        print("no es primo")
+        i += 1
+        break
+    else:
+        print("Es primo")
+        break

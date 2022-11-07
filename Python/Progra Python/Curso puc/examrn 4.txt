@@ -1,0 +1,88 @@
+1 
+buena
+def mayor(edad):
+  if edad >= 18:
+    return True
+  else:
+    return False 
+
+mala
+def mayor(edad):
+  if edad >= 18:
+    print(True)
+  else:
+    print(False)
+
+falta
+
+2
+buena 
+n = 5
+resultado = factorial(n)
+
+3
+buena 
+cantidad = 0
+def sumador(n):
+  cantidad += 1
+  n += 1
+  return n
+sumador(5)
+
+mala
+sumando = 10
+def sumador(n):
+  n += sumando
+  return n
+sumador(5)
+print(sumando)
+
+falta
+
+4
+10
+
+5
+buena
+from modulo import *
+print(multiplicar(2, 3))
+print(dividir(10, 5))
+
+buena
+from modulo import multiplicar, dividir
+print(multiplicar(2, 3))
+print(dividir(10, 5))
+
+mala
+from modulo import *
+print(modulo.multiplicar(2, 3))
+print(modulo.dividir(10, 5))
+
+falta
+
+6
+resultado1= 10
+resultado2= 20
+
+7
+not bool(x%n)
+
+8
+buena 
+no se importa el módulo random
+
+buena
+se llama a la f(X) antes de que se halla definido
+
+mala 
+se realiza una operación en el retorno
+
+9
+mala 
+el retorno de un f() puede incluir expresiones booleanas
+mala 
+las variables definidas dentro 
+
+10
+820 mala
+none buena
