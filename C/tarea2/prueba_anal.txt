@@ -1,0 +1,16 @@
+Tiempo InsertSort con 1000 datos: 0.0
+Tiempo MergeSort con 1000 datos: 0.000278
+Tiempo RadixSort con 1000 datos: 0.000560
+
+Tiempo InsertSort con 10000 datos: 0.0
+Tiempo MergeSort con 10000 datos: 0.003469
+Tiempo RadixSort con 10000 datos: 0.005237
+
+Tiempo InsertSort con 100000 datos: 0.0
+Tiempo MergeSort con 100000 datos: 0.026770
+Tiempo RadixSort con 100000 datos: 0.022419
+
+Tiempo InsertSort con 1000000 datos: 0.0
+Tiempo MergeSort con 1000000 datos: 0.205272
+Tiempo RadixSort con 1000000 datos: 0.229977
+
