@@ -1,3 +1,3 @@
 # Basics
 
-Lo básica de python y c
+Lo básica de python, c y java
